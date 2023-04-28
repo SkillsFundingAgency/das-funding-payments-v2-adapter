@@ -15,8 +15,8 @@ public class OrchestrationStarterInfo
         TimeSpan? timeout = null,
         string expectedCustomStatus = null)
     {
-        if (string.IsNullOrEmpty(starterName)) throw new ArgumentException("Missing starter name");
-        if (string.IsNullOrEmpty(orchestrationName)) throw new ArgumentException("Missing starter name");
+        if (string.IsNullOrEmpty(starterName)) throw new ArgumentException($"Missing {nameof(starterName)}");
+        if (string.IsNullOrEmpty(orchestrationName)) throw new ArgumentException($"Missing {nameof(orchestrationName)}");
 
         StarterName = starterName;
         OrchestrationName = orchestrationName;
